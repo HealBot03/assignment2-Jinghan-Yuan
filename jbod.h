@@ -6,16 +6,16 @@
 #define JBOD_NUM_DISKS            16
 #define JBOD_DISK_SIZE            65536 // Each disk is 65536 bytes (256 blocks * 256 bytes per block)
 #define JBOD_BLOCK_SIZE           256
-#define JBOD_NUM_BLOCKS_PER_DISK  256  //65536/256
+#define JBOD_NUM_BLOCKS_PER_DISK  256  // 65536 / 256
 
 typedef enum {
-  JBOD_MOUNT,
-  JBOD_UNMOUNT,
-  JBOD_SEEK_TO_DISK,
-  JBOD_SEEK_TO_BLOCK,
-  JBOD_READ_BLOCK,
-  JBOD_WRITE_BLOCK,
-  JBOD_SIGN_BLOCK,
+  JBOD_MOUNT          = 0x00,
+  JBOD_UNMOUNT        = 0x01,
+  JBOD_SEEK_TO_DISK   = 0x02,
+  JBOD_SEEK_TO_BLOCK  = 0x03,
+  JBOD_READ_BLOCK     = 0x04,
+  JBOD_WRITE_BLOCK    = 0x05,
+  JBOD_SIGN_BLOCK     = 0x06,
   JBOD_NUM_CMDS,
 } jbod_cmd_t;
 
